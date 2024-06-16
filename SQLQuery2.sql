@@ -1,1 +1,1 @@
-CREATE TABLE
+SELECT * FROM tbl_countries;

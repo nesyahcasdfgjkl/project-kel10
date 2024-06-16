@@ -8,6 +8,6 @@ BEGIN
 END;
 GO
 
-EXEC AddRegion @Id = 4, @Name = 'Africa';
+EXEC AddRegion @Id = 5, @Name = 'Oceania';
 
 select * from tbl_regions;

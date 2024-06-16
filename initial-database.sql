@@ -142,7 +142,4 @@ CREATE TABLE tbl_feedback (
     FOREIGN KEY (manager_id) REFERENCES tbl_employees(id)
 );
 
-USE master;
-DROP DATABASE employee;
-
 

@@ -28,10 +28,10 @@ select * from tbl_regions;
 --update regions
 CREATE OR ALTER PROCEDURE UpdateRegions
     	@idReg INT,
-	@nameReg varchar(100)
+	@nameReg varchar(40)
 AS
 BEGIN
-	DECLARE @message VARCHAR(50);
+	DECLARE @message VARCHAR(40);
     SET @message = 'Inputan id salah!!';
    
 
@@ -53,4 +53,29 @@ END;
 --call update
 EXEC UpdateRegions 7,'Pacific';
 EXEC UpdateRegions 8,'LATAM';
+
+
+--delete regions
+CREATE OR ALTER PROCEDURE DeleteRegions
+    @idReg int
+AS
+BEGIN
+	SET NOCOUNT ON;
+    DECLARE @message VARCHAR(40)
+    
+    IF EXISTS (SELECT 1 FROM tbl_regions WHERE id = @idReg)
+    BEGIN
+		DELETE FROM tbl_regions WHERE id = @idReg ;
+        SET @message = 'Data dengan Id ' + CAST(@idReg AS VARCHAR) + ' BERHASIL dihapus';
+    END
+    ELSE
+    BEGIN
+        SET @message = 'Data dengan Id ' + CAST(@idReg AS VARCHAR) + ' TIDAK BERHASIL dihapus. DATA TIDAK DITEMUKAN';
+    END
+	PRINT @message;
+END;
+
+--call sp delete
+EXEC DeleteRegions 8;
+
 

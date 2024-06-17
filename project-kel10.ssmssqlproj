@@ -175,6 +175,12 @@
           <AssociatedConnUserName />
           <FullPath>usp_update_location.sql</FullPath>
         </FileNode>
+        <FileNode Name="usp_update_password.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>usp_update_password.sql</FullPath>
+        </FileNode>
         <FileNode Name="vw_details_employee.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>

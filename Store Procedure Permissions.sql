@@ -48,7 +48,7 @@ BEGIN
     END
 END;
 --Pemanggilan/penggunaan Store Procedur
-EXEC UpdatePermissions 4,'Vieww';
+EXEC UpdatePermissions 5,'View';
 
 
 

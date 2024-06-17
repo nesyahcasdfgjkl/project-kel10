@@ -20,7 +20,7 @@ BEGIN
 END;
 
 --Call Store Procedur
-EXEC AddNewRegions 8,'change';
+EXEC AddNewRegions 8,'LATAAAM';
 
 select * from tbl_regions;
 
@@ -51,8 +51,7 @@ BEGIN
 END;
 
 --call update
-EXEC UpdateRegions 7,'Pacific';
-EXEC UpdateRegions 8,'LATAM';
+EXEC UpdateRegions 8,'LATAM';	
 
 
 --delete regions

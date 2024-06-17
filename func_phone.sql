@@ -21,4 +21,6 @@ BEGIN
     RETURN @isNumeric;
 END;
 
-select dbo.func_phone('123aa)
+select dbo.func_phone('12312') AS Result1 -- expected 1
+select dbo.func_phone('123AA') AS Result2 -- expected 0
+

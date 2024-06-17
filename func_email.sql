@@ -20,3 +20,7 @@ BEGIN
 
     RETURN @IsValid;
 END;
+
+SELECT dbo.func_email_format('user@example.com') AS Result1; -- Expected 1
+SELECT dbo.func_email_format('alice_johnson@example.co.uk') AS Result2; -- Expected 1
+SELECT dbo.func_email_format('plainaddress') AS Result3; -- Expected 0

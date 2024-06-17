@@ -20,6 +20,8 @@ BEGIN
     END
     ELSE
     BEGIN
-        SELECT 0 AS LoginResult, NULL AS UserID;
+        SELECT 'Account Tidak Ditemukan' AS LoginResult, NULL AS UserID;
     END
 END
+
+

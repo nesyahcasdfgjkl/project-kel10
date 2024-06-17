@@ -21,4 +21,7 @@ BEGIN
     RETURN @isNumeric;
 END;
 
-select dbo.func_postal_code('12312')
+select dbo.func_postal_code('12312') AS Result1 -- expected 1
+select dbo.func_postal_code('123AA') AS Result2 -- expected 0
+
+

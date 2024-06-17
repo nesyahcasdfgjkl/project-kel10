@@ -21,4 +21,10 @@ BEGIN
     
     RETURN @IsValid;
 END;
+SELECT dbo.func_password_policy('Password12#') AS Result1 -- expected 1
+SELECT dbo.func_password_policy('password12#') AS Result1 -- expected 0
+SELECT dbo.func_password_policy('Password12') AS Result1 -- expected 0
+SELECT dbo.func_password_policy('password') AS Result1 -- expected 0
+
+
 

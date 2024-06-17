@@ -19,4 +19,11 @@ DECLARE @password VARCHAR(225) = 'password123';
 EXEC usp_login @username, @password;
 GO
 
+-- Uji dengan accounts yang tidak ada
+DECLARE @username VARCHAR(25) = 'nesya';
+DECLARE @password VARCHAR(225) = 'password';
+
+EXEC usp_login @username, @password;
+GO
+
 SELECT * FROM tbl_accounts;

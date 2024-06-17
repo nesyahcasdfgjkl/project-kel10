@@ -13,3 +13,5 @@ BEGIN
 	RETURN @isValid;
 END;
 
+SELECT dbo.func_password_match('Password12#', 'Password12#') AS Result1 -- expected 1
+SELECT dbo.func_password_match('Password12#', 'Password12') AS Result2 -- expected 0

@@ -73,17 +73,17 @@
           <AssociatedConnUserName />
           <FullPath>insert-data.sql</FullPath>
         </FileNode>
-        <FileNode Name="test_usp_delete_employee.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>test_usp_delete_employee.sql</FullPath>
-        </FileNode>
         <FileNode Name="test_usp_employee.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>test_usp_employee.sql</FullPath>
+        </FileNode>
+        <FileNode Name="test_usp_employee_kpi.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>test_usp_employee_kpi.sql</FullPath>
         </FileNode>
         <FileNode Name="test_usp_location.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
@@ -97,17 +97,29 @@
           <AssociatedConnUserName />
           <FullPath>test_usp_login.sql</FullPath>
         </FileNode>
-        <FileNode Name="test_usp_update_employee.sql">
+        <FileNode Name="test_usp_role.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>test_usp_update_employee.sql</FullPath>
+          <FullPath>test_usp_role.sql</FullPath>
+        </FileNode>
+        <FileNode Name="tr_insert_employee.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>tr_insert_employee.sql</FullPath>
         </FileNode>
         <FileNode Name="usp_create_employee.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>usp_create_employee.sql</FullPath>
+        </FileNode>
+        <FileNode Name="usp_create_employee_kpi.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>usp_create_employee_kpi.sql</FullPath>
         </FileNode>
         <FileNode Name="usp_create_location.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
@@ -121,6 +133,12 @@
           <AssociatedConnUserName />
           <FullPath>usp_delete_employee.sql</FullPath>
         </FileNode>
+        <FileNode Name="usp_delete_employee_kpi.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>usp_delete_employee_kpi.sql</FullPath>
+        </FileNode>
         <FileNode Name="usp_delete_location.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
@@ -133,11 +151,23 @@
           <AssociatedConnUserName />
           <FullPath>usp_login.sql</FullPath>
         </FileNode>
+        <FileNode Name="usp_role.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>usp_role.sql</FullPath>
+        </FileNode>
         <FileNode Name="usp_update_employee.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>usp_update_employee.sql</FullPath>
+        </FileNode>
+        <FileNode Name="usp_update_employee_kpi.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>usp_update_employee_kpi.sql</FullPath>
         </FileNode>
         <FileNode Name="usp_update_location.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>

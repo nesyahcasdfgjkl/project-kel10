@@ -6,17 +6,21 @@ CREATE OR ALTER PROCEDURE AddNewCountries
 AS
 BEGIN
 	DECLARE @message VARCHAR(100);
-
+	SET @message = 'Terdapat duplikat data id Job, silahkan cek kembali';
     -- Isi dari stored procedure
-    INSERT INTO tbl_countries ( id,name,region)
-    VALUES (@id,@name,@region);
-
-	--setelah insert akan ditampilkan datanya
-	SELECT id,name,region FROM tbl_countries Where id=@id;
-
+	IF NOT EXISTS (SELECT 1 FROM tbl_countries WHERE id = @id)
+    BEGIN
+		INSERT INTO tbl_countries ( id,name,region)
+		VALUES (@id,@name,@region);
+		--setelah insert akan ditampilkan datanya
+		SELECT id,name,region FROM tbl_countries Where id=@id;
+	END
+	BEGIN
+		PRINT @message
+	END
 END;
 --Pemanggilan/penggunaan Store Procedur
-EXEC AddNewCountries 'SPA','Spanyol',2;
+EXEC AddNewCountries 'IDN','Indonesia',3;
 
 
 -- store procedure UpdateDataCountry
@@ -29,23 +33,20 @@ BEGIN
 	DECLARE @message VARCHAR(30);
     SET @message = 'Inputan id salah';
     
-    SET NOCOUNT ON;
-
-    UPDATE tbl_countries
-    SET
-        id = @id,
-        name = @name,
-        region = @region
-    WHERE
-        id = @id;
-
-    IF NOT EXISTS (SELECT 1 FROM tbl_countries WHERE id = @id)
+	IF EXISTS (SELECT 1 FROM tbl_countries WHERE id = @id)
     BEGIN
-        PRINT @message;
-    END
+		UPDATE tbl_countries
+		SET
+			id = @id,
+			name = @name,
+			region = @region
+		WHERE
+			id = @id;
+		SELECT * FROM tbl_countries WHERE id = @id;
+	END
     ELSE
     BEGIN
-        SELECT * FROM tbl_countries WHERE id = @id;
+		 PRINT @message;
     END
 END;
 --Pemanggilan/penggunaan Store Procedur

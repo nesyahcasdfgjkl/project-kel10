@@ -3,7 +3,7 @@ CREATE OR ALTER PROCEDURE AddNewRegions
 	@nameReg varchar(40)
 AS
 BEGIN
-	DECLARE @message VARCHAR(40)
+	DECLARE @message VARCHAR(100)
 	SET @message = 'Terdapat duplikat data id regions, silahkan cek kembali';
 -- Isi dari stored procedure
 	IF NOT EXISTS (SELECT 1 FROM tbl_regions WHERE id = @idReg)
@@ -61,7 +61,7 @@ CREATE OR ALTER PROCEDURE DeleteRegions
 AS
 BEGIN
 	SET NOCOUNT ON;
-    DECLARE @message VARCHAR(40)
+    DECLARE @message VARCHAR(100)
     
     IF EXISTS (SELECT 1 FROM tbl_regions WHERE id = @idReg)
     BEGIN

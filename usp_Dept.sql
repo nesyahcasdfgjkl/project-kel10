@@ -7,7 +7,7 @@ CREATE OR ALTER PROCEDURE AddNewDepartments
 AS
 BEGIN
 	DECLARE @message VARCHAR(100)
-	SET @message = 'Terdapat duplikat data id regions, silahkan cek kembali';
+	SET @message = 'Terdapat duplikat data id Deparments, silahkan cek kembali';
 
 -- Isi dari stored procedure
 	IF NOT EXISTS (SELECT 1 FROM tbl_departments WHERE id = @idDept)

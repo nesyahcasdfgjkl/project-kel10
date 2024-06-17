@@ -8,13 +8,20 @@ CREATE OR ALTER PROCEDURE AddNewDataJob
     
 AS
 BEGIN
+	DECLARE @message VARCHAR(100)
+	SET @message = 'Terdapat duplikat data id Job, silahkan cek kembali';
     -- Isi dari stored procedure
-    INSERT INTO tbl_jobs ( id,title, min_salary,max_salary)
-    VALUES ( @idJob,@titleJob,@min_salary,@max_salary);
-
-	--setelah insert akan ditampilkan datanya
-	SELECT id,title,min_salary,max_salary FROM tbl_jobs
-
+	IF NOT EXISTS (SELECT 1 FROM tbl_jobs WHERE id = @idJob)
+	BEGIN
+		INSERT INTO tbl_jobs ( id,title, min_salary,max_salary)
+		VALUES ( @idJob,@titleJob,@min_salary,@max_salary);
+		--setelah insert akan ditampilkan datanya
+		SELECT id,title,min_salary,max_salary FROM tbl_jobs
+	END
+	ELSE
+	BEGIN
+		PRINT @message
+	END;
 END;
 --Pemanggilan/penggunaan Store Procedur
 EXEC AddNewDataJob 'J006','Manager',65000,125000;
@@ -29,24 +36,21 @@ CREATE OR ALTER PROCEDURE UpdateJob
 AS
 BEGIN
     DECLARE @message VARCHAR(30);
-    SET @message = 'Inputan id salah';
+    SET @message = 'Inputan id salah!!';
     
-    SET NOCOUNT ON;
-
-    UPDATE tbl_jobs
-    SET
-        title = @Title,
-        min_salary = @MinSalary,
-        max_salary = @MaxSalary
-    WHERE
-        id = @JobID;
-
     IF NOT EXISTS (SELECT 1 FROM tbl_jobs WHERE id = @JobID)
     BEGIN
         PRINT @message;
     END
     ELSE
     BEGIN
+		UPDATE tbl_jobs
+		SET
+        title = @Title,
+        min_salary = @MinSalary,
+        max_salary = @MaxSalary
+		WHERE
+        id = @JobID;
         SELECT * FROM tbl_jobs WHERE id = @JobID;
     END
 END;
@@ -77,4 +81,3 @@ BEGIN
 END;
 
 EXEC DeleteJob 'J007';
-SELECT * FROM tbl_jobs;

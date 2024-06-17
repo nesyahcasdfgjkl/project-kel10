@@ -6,7 +6,7 @@ CREATE OR ALTER PROCEDURE AddNewDepartments
 	@idLoc INT
 AS
 BEGIN
-	DECLARE @message VARCHAR(30)
+	DECLARE @message VARCHAR(100)
 	SET @message = 'Terdapat duplikat data id regions, silahkan cek kembali';
 
 -- Isi dari stored procedure
@@ -37,7 +37,7 @@ CREATE OR ALTER PROCEDURE updateDepartments
     @idLoc INT
 AS
 BEGIN
-    DECLARE @message VARCHAR(30);
+    DECLARE @message VARCHAR(50);
     SET @message = 'Inputan id salah!!';
 
     -- Check if the department ID exists
@@ -69,7 +69,7 @@ CREATE OR ALTER PROCEDURE DeleteDepartments
 AS
 BEGIN
 	SET NOCOUNT ON;
-    DECLARE @message VARCHAR(30)
+    DECLARE @message VARCHAR(100)
     
     IF EXISTS (SELECT 1 FROM tbl_departments WHERE id = @idDept)
     BEGIN

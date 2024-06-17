@@ -19,6 +19,48 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
+        <FileNode Name="func_email.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>func_email.sql</FullPath>
+        </FileNode>
+        <FileNode Name="func_gender.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>func_gender.sql</FullPath>
+        </FileNode>
+        <FileNode Name="func_password_match.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>func_password_match.sql</FullPath>
+        </FileNode>
+        <FileNode Name="func_password_policy.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>func_password_policy.sql</FullPath>
+        </FileNode>
+        <FileNode Name="func_phone.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>func_phone.sql</FullPath>
+        </FileNode>
+        <FileNode Name="func_postal_code.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>func_postal_code.sql</FullPath>
+        </FileNode>
+        <FileNode Name="func_salary.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>func_salary.sql</FullPath>
+        </FileNode>
         <FileNode Name="initial-database.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
@@ -37,11 +79,23 @@
           <AssociatedConnUserName />
           <FullPath>test_usp_create_employee.sql</FullPath>
         </FileNode>
+        <FileNode Name="test_usp_delete_employee.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>test_usp_delete_employee.sql</FullPath>
+        </FileNode>
         <FileNode Name="test_usp_login.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>test_usp_login.sql</FullPath>
+        </FileNode>
+        <FileNode Name="test_usp_update_employee.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>test_usp_update_employee.sql</FullPath>
         </FileNode>
         <FileNode Name="usp_create_employee.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
@@ -49,11 +103,35 @@
           <AssociatedConnUserName />
           <FullPath>usp_create_employee.sql</FullPath>
         </FileNode>
+        <FileNode Name="usp_create_location.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>usp_create_location.sql</FullPath>
+        </FileNode>
+        <FileNode Name="usp_delete_employee.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>usp_delete_employee.sql</FullPath>
+        </FileNode>
         <FileNode Name="usp_login.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>usp_login.sql</FullPath>
+        </FileNode>
+        <FileNode Name="usp_update_employee.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>usp_update_employee.sql</FullPath>
+        </FileNode>
+        <FileNode Name="vw_details_employee.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NESYA:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NESYA</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>vw_details_employee.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

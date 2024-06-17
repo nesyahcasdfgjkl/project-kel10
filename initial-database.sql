@@ -1,3 +1,8 @@
+use master
+go 
+
+CREATE DATABASE employee;
+
 -- MEMBUAT TABEL ROLE
 CREATE TABLE tbl_roles (
     id INT IDENTITY(1,1) PRIMARY KEY,
@@ -38,7 +43,6 @@ CREATE TABLE tbl_countries (
 	FOREIGN KEY (region) REFERENCES tbl_regions(id)
 );
 select * from tbl_countries;
-drop table tbl_countries
 
 -- MEMBUAT TABEL LOCATION
 CREATE TABLE tbl_locations (
@@ -75,6 +79,8 @@ CREATE TABLE tbl_employees (
     last_name VARCHAR(25) NOT NULL,
     gender VARCHAR(10),
     email VARCHAR(25) UNIQUE NOT NULL,
+	input_password VARCHAR(255) NOT NULL,
+	password_confirm  VARCHAR(255) NOT NULL,
     phone VARCHAR(20),
     hire_date DATE NOT NULL,
     salary INT NOT NULL,
@@ -85,12 +91,13 @@ CREATE TABLE tbl_employees (
     FOREIGN KEY (job) REFERENCES tbl_jobs(id),
     FOREIGN KEY (department) REFERENCES tbl_departments(id)
 );
+drop table tbl_employees
 
 -- MEMBUAT TABEL ACCOUNT
 CREATE TABLE tbl_accounts (
     employee INT PRIMARY KEY,
     username VARCHAR(25),
-    password VARCHAR(255) NOT NULL,
+    input_password VARCHAR(255) NOT NULL,
     otp INT,
     is_expired BIT,
     is_used DATETIME,
@@ -169,6 +176,10 @@ CREATE TABLE tbl_feedback (
     FOREIGN KEY (manager_id) REFERENCES tbl_employees(id)
 );
 drop table tbl_feedback
+
+ALTER TABLE tbl_employees
+ADD password_account VARCHAR(255), confirm_password VARCHAR(255);
+
 
 
 

@@ -1,29 +1,11 @@
--- ================================================
--- Template generated from Template Explorer using:
--- Create Procedure (New Menu).SQL
---
--- Use the Specify Values for Template Parameters 
--- command (Ctrl-Shift-M) to fill in the parameter 
--- values below.
---
--- This block of comments will not be included in
--- the definition of the procedure.
--- ================================================
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
--- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date,,>
--- Description:	<Description,,>
--- =============================================
 CREATE PROCEDURE usp_update_employee
-	@id INT,
+	@id INT, 
 	@first_name VARCHAR(25),
     @last_name VARCHAR(25),
     @gender VARCHAR(10),
     @email VARCHAR(25),
+	@input_password VARCHAR(255),
+	@password_confirm VARCHAR(255),
     @phone VARCHAR(20),
     @hire_date DATE,
     @salary INT,
@@ -40,6 +22,8 @@ BEGIN
         last_name = @last_name,
         gender = @gender,
         email = @email,
+		input_password = @input_password,
+		password_confirm = @password_confirm,
         phone = @phone,
         hire_date = @hire_date,
         salary = @salary,
@@ -52,3 +36,5 @@ BEGIN
     -- Menyertakan log atau pesan output
     SELECT 'Employee data updated successfully' AS Message;
 END;
+
+

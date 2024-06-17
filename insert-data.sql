@@ -4,6 +4,8 @@ INSERT INTO tbl_roles (name) VALUES
 	('Admin'),
 	('Manager'),
 	('Employee');
+select * from tbl_roles
+
 
 
 -- MENAMBAHKAN DATA DI TABEL PERMISSIONS
@@ -12,6 +14,10 @@ INSERT INTO tbl_permissions (name) VALUES
 	('Update'),
 	('Delete'),
 	('View');
+
+select * from tbl_permissions;
+DELETE FROM tbl_permissions
+WHERE id>4;
 
 -- MENAMBAHKAN DATA DI TABEL ROLE PERMISSIONS
 INSERT INTO tbl_role_permissions (role, permission) VALUES
@@ -25,21 +31,28 @@ INSERT INTO tbl_role_permissions (role, permission) VALUES
 	(3, 2),
 	(3, 4),
 	(4, 4);
+select * from tbl_role_permissions
+
 
 -- MENAMBAHKAN DATA DI TABEL REGION
 INSERT INTO tbl_regions (name) VALUES
 	('North America'),
 	('Europe'),
 	('Asia');
+select * from tbl_regions
+
 
 -- MENAMBAHKAN DATA DI TABEL COUNTRY
 INSERT INTO tbl_countries (id, name, region) VALUES 
-	('USA', 'United States', 1),
-	('CAN', 'Canada', 1),
-	('GBR', 'United Kingdom', 2),
-	('DEU', 'Germany', 2),
-	('CHN', 'China', 3),
-	('JPN', 'Japan', 3);
+    ('USA', 'United States', 1),
+    ('CAN', 'Canada', 1),
+    ('GBR', 'United Kingdom', 2),
+    ('DEU', 'Germany', 2),
+    ('CHN', 'China', 3),
+    ('JPN', 'Japan', 3);
+select * from tbl_countries
+
+
 
 -- MENAMBAHKAN DATA DI TABEL LOCATION
 INSERT INTO tbl_locations (street_address, postal_code, city, state_province, country) VALUES 
@@ -49,6 +62,7 @@ INSERT INTO tbl_locations (street_address, postal_code, city, state_province, co
 ('321 Oak Ave', '09876', 'Berlin', 'BE', 'DEU'),
 ('654 Pine Rd', '11223', 'Beijing', 'BJ', 'CHN'),
 ('987 Cedar Blvd', '44556', 'Tokyo', 'TK', 'JPN');
+select * from tbl_locations
 
 
 -- MENAMBAHKAN DATA DI TABEL DEPARTMENT 
@@ -59,6 +73,8 @@ INSERT INTO tbl_departments (name, location) VALUES
 ('Sales', 4),
 ('Marketing', 5),
 ('R&D', 6);
+select * from tbl_departments
+
 
 -- MENAMBAHKAN DATA DI TABEL JOB
 INSERT INTO tbl_jobs (id, title, min_salary, max_salary) VALUES 
@@ -67,23 +83,32 @@ INSERT INTO tbl_jobs (id, title, min_salary, max_salary) VALUES
 ('J003', 'Analyst', 40000, 80000),
 ('J004', 'Clerk', 30000, 60000),
 ('J005', 'Director', 80000, 160000);
+select * from tbl_jobs
 
 -- MENAMBAHKAN DATA DI TABEL EMPLOYEE
-INSERT INTO tbl_employees (first_name, last_name, gender, email, phone, hire_date, salary, manager, job, department) VALUES 
-('John', 'Doe', 'Male', 'john.doe@example.com', '123-456-7890', '2020-01-15', 70000, NULL, 'J001', 1),
-('Jane', 'Smith', 'Female', 'jane.smith@example.com', '234-567-8901', '2019-03-10', 80000, 1, 'J002', 2),
-('Sam', 'Brown', 'Male', 'sam.brown@example.com', '345-678-9012', '2018-05-20', 60000, 1, 'J003', 3),
-('Sue', 'Green', 'Female', 'sue.green@example.com', '456-789-0123', '2021-07-30', 50000, 2, 'J004', 4),
-('Tom', 'White', 'Male', 'tom.white@example.com', '567-890-1234', '2017-09-25', 90000, 2, 'J005', 5);
+INSERT INTO tbl_employees (first_name, last_name, gender, email, input_password, password_confirm, phone, hire_date, salary, manager, job, department) VALUES 
+('Super', 'Admin', 'Male', 'superadmin@example.com', 'superadmin123', 'superadmin123', '111-123-1239', '2019-08-17', 80000, 1, 'J001', 1),
+('A', 'Admin', 'Male', 'admin@example.com', 'admin123', 'admin123', '111-167-5674', '2019-08-17', 80000, 1, 'J001', 1),
+('Manager', '1', 'Male', 'manager1@example.com', 'manager123', 'manager123', '100-156-1212', '2019-08-17', 80000, 1, 'J001', 1),
+('John', 'Doe', 'Male', 'john.doe@example.com', 'password123', 'password123', '123-456-7890', '2020-01-15', 70000, NULL, 'J001', 1),
+('Jane', 'Smith', 'Female', 'jane.smith@example.com',  'password123', 'password123', '234-567-8901', '2019-03-10', 80000, 1, 'J002', 2),
+('Sam', 'Brown', 'Male', 'sam.brown@example.com', 'password123', 'password123', '345-678-9012', '2018-05-20', 60000, 1, 'J003', 3),
+('Sue', 'Green', 'Female', 'sue.green@example.com', 'password123', 'password123', '456-789-0123', '2021-07-30', 50000, 2, 'J004', 4),
+('Tom', 'White', 'Male', 'tom.white@example.com', 'password123', 'password123', '567-890-1234', '2017-09-25', 90000, 2, 'J005', 5);
+select * from tbl_employees
 
 
 -- MENAMBAHKAN DATA DI TABEL ACCOUNTS
-INSERT INTO tbl_accounts (employee, username, password, otp, is_expired, is_used) VALUES 
-(1, 'john.doe', HASHBYTES('SHA2_256', 'password123'), 123456, 0, '2024-06-15 10:00:00'),
-(2, 'jane.smith',HASHBYTES('SHA2_256', 'password123'), 123457, 0, '2024-06-15 10:00:00'),
-(3, 'sam.brown', HASHBYTES('SHA2_256', 'password123'), 123458, 0, '2024-06-15 10:00:00'),
-(4, 'sue.green', HASHBYTES('SHA2_256', 'password123'), 123459, 0, '2024-06-15 10:00:00'),
-(5, 'tom.white', HASHBYTES('SHA2_256', 'password123'), 123460, 0, '2024-06-15 10:00:00');
+INSERT INTO tbl_accounts (employee, username, input_password, otp, is_expired, is_used) VALUES 
+(1, 'superadmin', 'superadmin123', 123456, 0, '2024-06-15 10:00:00'),
+(2, 'admin', 'admin123', 123456, 0, '2024-06-15 10:00:00'),
+(3, 'manager1', 'manager123', 123456, 0, '2024-06-15 10:00:00'),
+(4, 'john.doe', 'password123', 123456, 0, '2024-06-15 10:00:00'),
+(5, 'jane.smith','password123', 123457, 0, '2024-06-15 10:00:00'),
+(6, 'sam.brown', 'password123', 123458, 0, '2024-06-15 10:00:00'),
+(7, 'sue.green', 'password123', 123459, 0, '2024-06-15 10:00:00'),
+(8, 'tom.white', 'password123', 123460, 0, '2024-06-15 10:00:00');
+select * from tbl_accounts
 
 -- MENAMBAHKAN DATA DI TABEL ACCOUNT ROLE
 INSERT INTO tbl_account_roles (account, role) VALUES 

@@ -8,10 +8,10 @@ BEGIN
     DECLARE @UserID INT;
 
     -- Cek apakah username dan password cocok
-    SELECT @UserID = id
+    SELECT @UserID = employee
     FROM tbl_accounts
-    WHERE Username = @username
-      AND Password = HASHBYTES('SHA2_256', @password);
+    WHERE username = @username
+      AND input_password = HASHBYTES('SHA2_256', @password);
 
     -- Jika ditemukan, return 1 (berhasil login), jika tidak return 0 (gagal login)
     IF (@UserID IS NOT NULL)
